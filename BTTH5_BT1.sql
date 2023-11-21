@@ -1,0 +1,10 @@
+USE master
+GO
+
+CREATE LOGIN SQLLogin1 with password = '123'
+EXEC SP_ADDLOGIN 'SQLLogin2', '123'
+
+
+USE master
+GO
+GRANT CREATE ANY DATABASE TO SQLLogin1 
